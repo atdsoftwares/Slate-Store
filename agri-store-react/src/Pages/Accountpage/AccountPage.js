@@ -6,7 +6,7 @@ import {
   Spinner,
 } from "../../Components/AllComponentIndex";
 import { useProductDataContext } from "../../Context/ProductListingPageContext";
-import "./AccountPage.css";
+
 
 function AccountPage() {
   const { isLoading } = useProductDataContext();

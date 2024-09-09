@@ -1,36 +1,90 @@
 import { React, Link } from "../../Utils/CustomUtils";
-
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Image,
+  Stack,
+} from "@chakra-ui/react";
 
 function Hero() {
   return (
-    <div>
+    <Box
+      bg="gray.900"
+      color="gray.400"
+      py={{ base: "10", md: "24" }}
+      px={{ base: "4", md: "10" }}
+    >
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        alignItems="center"
+        justify="center"
+        maxW="7xl"
+        mx="auto"
+      >
+        {/* Image Section */}
+        <Box
+          flex="1"
+          mb={{ base: "10", md: "0" }}
+          maxW={{ base: "80%", md: "50%" }}
+        >
+          <Image
+            src="https://svgshare.com/i/y5h.svg"
+            alt="Super Cars"
+            borderRadius="lg"
+            boxShadow="lg"
+            objectFit="cover"
+            w="100%"
+            h="auto"
+          />
+        </Box>
 
-      <div class="mt-[-56px]">
+        {/* Text Section */}
+        <Box
+          flex="1"
+          textAlign={{ base: "center", md: "left" }}
+          ml={{ md: "10" }}
+        >
+          <Heading
+            as="h1"
+            fontSize={{ base: "3xl", md: "4xl" }}
+            fontWeight="bold"
+            color="white"
+            mb="4"
+          >
+            Before they sold out <br />
+            All Super Cars
+          </Heading>
+          <Text fontSize="lg" mb="8">
+            Try the new edge technology at a cheap cost, selling the cars at the
+            best possible price in the market.
+          </Text>
 
-        <section class="text-gray-400 bg-gray-900 body-font">
-          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
-              <img class="object-cover object-center rounded" alt="hero" src="https://svgshare.com/i/y5h.svg" />
-            </div>
-            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-              <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Before they sold out
-                <br class="hidden lg:inline-block" />All Super Cars
-              </h1>
-              <p class="mb-8 leading-relaxed">Try the new edge technology at cheap cost , selling the cars at best possible price in market.</p>
-              <div class="flex justify-center">
-                <button class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
-                  <Link to='/ProductListingPage'>
-                    Explore Cars
-                  </Link>
-
-                </button>
-                {/* <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Button</button> */}
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
+          {/* CTA Button */}
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            spacing="4"
+            justify={{ base: "center", md: "flex-start" }}
+          >
+            <Button
+              as={Link}
+              to="/ProductListingPage"
+              bg="red.500"
+              color="white"
+              _hover={{ bg: "red.600" }}
+              px="6"
+              py="2"
+              borderRadius="md"
+              size="lg"
+            >
+              Explore Cars
+            </Button>
+          </Stack>
+        </Box>
+      </Flex>
+    </Box>
   );
 }
 

@@ -1,7 +1,4 @@
-html{
+html {
   padding: 0;
   margin: 0;
-  background-color: rgb(55 65 81);
- 
 }
-@import 'react-tabs/style/react-tabs.css';

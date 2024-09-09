@@ -4,6 +4,7 @@ import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
 import { PageStructure } from "./PageStructure";
 import { Toaster } from "react-hot-toast";
+import { ChakraProvider } from "@chakra-ui/react";
 import "./index.css";
 // Call make Server
 makeServer();
@@ -11,7 +12,9 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <PageStructure />
+      <ChakraProvider>
+        <PageStructure />
+      </ChakraProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

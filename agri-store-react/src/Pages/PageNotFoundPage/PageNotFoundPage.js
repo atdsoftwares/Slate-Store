@@ -5,7 +5,7 @@ import {
   React,
 } from "../../Utils/CustomUtils";
 import { Footer, Header } from "../../Components/AllComponentIndex";
-import "./PageNotFoundPage.css";
+
 import NoDataFound from "../../Components/Others/NoDataFound";
 
 function PageNotFound() {
